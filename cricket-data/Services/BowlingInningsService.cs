@@ -44,7 +44,6 @@ public static class QueryableExtensions
             Position = o.Position,
             Innings = o.Innings,
             Opposition = o.Opposition,
-            TestNumber = o.TestNumber,
             Ground = o.Ground.Name,
             PlayerName = o.Player.Name
         });

@@ -6,19 +6,19 @@ public class BowlingInnings
 {
     public int Id { get; set; }
 
-    public float Overs { get; set; }
+    public float? Overs { get; set; }
 
-    public int Maidens { get; set; }
+    public int? Maidens { get; set; }
 
-    public int Runs { get; set; }
+    public int? Runs { get; set; }
 
-    public int Wickets { get; set; }
+    public int? Wickets { get; set; }
 
-    public float Economy { get; set; }
+    public float? Economy { get; set; }
 
-    public int Position { get; set; }
+    public int? Position { get; set; }
 
-    public int Innings { get; set; }
+    public int? Innings { get; set; }
 
     public string Opposition { get; set; }
 
@@ -43,23 +43,23 @@ public class BowlingInningsDto
 {
     public int Id { get; set; }
 
-    public float Overs { get; set; }
+    public float? Overs { get; set; }
 
-    public int Maidens { get; set; }
+    public int? Maidens { get; set; }
 
-    public int Runs { get; set; }
+    public int? Runs { get; set; }
 
-    public int Wickets { get; set; }
+    public int? Wickets { get; set; }
 
-    public float Economy { get; set; }
+    public float? Economy { get; set; }
 
-    public int Position { get; set; }
+    public int? Position { get; set; }
 
-    public int Innings { get; set; }
+    public int? Innings { get; set; }
 
     public string Opposition { get; set; }
 
-    public string? TestNumber { get; set; }
+    // public string? TestNumber { get; set; }
 
     public string? Ground { get; set; }
 
