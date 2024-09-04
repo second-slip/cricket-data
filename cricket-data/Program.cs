@@ -2,7 +2,10 @@ using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddDbContext<CricketDataDb>(opt => opt.UseInMemoryDatabase("CricketData"));
+builder.Services.AddDbContext<CricketDataDb>(opt =>
+        // opt.UseInMemoryDatabase("CricketData"));
+        opt.UseSqlServer("name=ConnectionStrings:DefaultConnection"));
+
 builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
 builder.Services.AddEndpointsApiExplorer();

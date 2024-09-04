@@ -101,3 +101,4 @@ c:\Users\Julie Cross\source\repos\cricket-data\cricket-data.tests\bin\Debug\net8
 c:\Users\Julie Cross\source\repos\cricket-data\cricket-data.tests\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Abstractions.dll
 c:\Users\Julie Cross\source\repos\cricket-data\cricket-data.tests\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.InMemory.dll
 c:\Users\Julie Cross\source\repos\cricket-data\cricket-data.tests\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Relational.dll
+c:\Users\Julie Cross\source\repos\cricket-data\cricket-data.tests\obj\Debug\net8.0\cricket-data.tests.sourcelink.json

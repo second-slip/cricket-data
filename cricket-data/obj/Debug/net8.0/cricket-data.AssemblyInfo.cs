@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("cricket-data")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c0f33255493160fb775f3c05ea04ecc960f968be")]
 [assembly: System.Reflection.AssemblyProductAttribute("cricket-data")]
 [assembly: System.Reflection.AssemblyTitleAttribute("cricket-data")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
