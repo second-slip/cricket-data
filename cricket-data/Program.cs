@@ -8,6 +8,8 @@ builder.Services.AddDbContext<CricketDataDb>(opt =>
 
 builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
+builder.Services.AddProblemDetails();
+
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddOpenApiDocument(config =>
 {
@@ -32,11 +34,25 @@ if (app.Environment.IsDevelopment())
     });
 }
 
+app.UseExceptionHandler(exceptionHandlerApp 
+    => exceptionHandlerApp.Run(async context 
+        => await Results.Problem()
+                     .ExecuteAsync(context)));
+
+ app.UseStatusCodePages(async statusCodeContext 
+    => await Results.Problem(statusCode: statusCodeContext.HttpContext.Response.StatusCode)
+                 .ExecuteAsync(statusCodeContext.HttpContext));
+
 app.MapGet("/", () => "Hello World!");
+
+app.MapGet("/exception", () => 
+{
+    throw new InvalidOperationException("Sample Exception");
+});
 
 var bowlingInnings = app.MapGroup("/bowling-innings"); // MapGroup API
 
-bowlingInnings.MapGet("/", BowlingInningsEnpoints.GetAllBowlingInnings);
+// bowlingInnings.MapGet("/", BowlingInningsEnpoints.GetAllBowlingInnings);
 bowlingInnings.MapGet("/player/{id}", BowlingInningsEnpoints.GetBowlingInnings);
 
 app.Run();
