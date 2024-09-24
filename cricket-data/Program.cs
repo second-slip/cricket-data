@@ -45,11 +45,6 @@ app.UseExceptionHandler(exceptionHandlerApp
 
 app.MapGet("/", () => "Hello World!");
 
-app.MapGet("/exception", () => 
-{
-    throw new InvalidOperationException("Sample Exception");
-});
-
 var bowlingInnings = app.MapGroup("/bowling-innings"); // MapGroup API
 
 // bowlingInnings.MapGet("/", BowlingInningsEnpoints.GetAllBowlingInnings);
