@@ -47,7 +47,6 @@ app.MapGet("/", () => "Hello World!");
 
 var bowlingInnings = app.MapGroup("/bowling-innings"); // MapGroup API
 
-// bowlingInnings.MapGet("/", BowlingInningsEnpoints.GetAllBowlingInnings);
 bowlingInnings.MapGet("/player/{id}", BowlingInningsEnpoints.GetBowlingInnings);
 
 app.Run();

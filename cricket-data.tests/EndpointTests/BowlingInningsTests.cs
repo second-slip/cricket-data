@@ -2,30 +2,22 @@ using Microsoft.AspNetCore.Http.HttpResults;
 
 namespace cricket_data.tests;
 
-public class UnitTest1
+public class BowlingInningsTests
 {
-    [Fact]
-    public void Test1()
-    {
-        Assert.True(true);
-    }
-
-    // change test name
     [Fact]
     public async Task GetBowlingInningsReturnsNotFoundIfNotExists()
     {
         // Arrange
         var mock = new Mock<IBowlingInningsService>();
 
-        mock.Setup(m => m.GetBowlingInningsAsync(It.IsAny<int>())) //It.Is<int>(id => id == 1)))
+        mock.Setup(m => m.GetBowlingInningsAsync(It.IsAny<int>()))
             .ReturnsAsync(new List<BowlingInningsDto>());
 
         // Act
         var result = await BowlingInningsEnpoints.GetBowlingInnings(1, mock.Object);
 
-        // Assert: Check for the correct returned type
+        // Assert
         Assert.IsType<NotFound>(result);
-        // Assert.IsType<Ok<Todo[]>>(result);
     }
 
     //     [Fact]
@@ -72,19 +64,7 @@ public class UnitTest1
         // Act
         var result = await BowlingInningsEnpoints.GetBowlingInnings(1, mock.Object);
 
-        // Assert: Check for the correct returned type
+        // Assert
         Assert.IsType<Ok<IReadOnlyList<BowlingInningsDto>>>(result);
     }
-
-    // public async Task GetAllTodos_ReturnsOkOfTodosResult()
-    // {
-    //     // Arrange
-    //     var db = CreateDbContext();
-
-    //     // Act
-    //     var result = await TodosApi.GetAllTodos(db);
-
-    //     // Assert: Check for the correct returned type
-    //     Assert.IsType<Ok<Todo[]>>(result);
-    // }
 }

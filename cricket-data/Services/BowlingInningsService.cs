@@ -17,10 +17,9 @@ public class BowlingInningsService : IBowlingInningsService
 
     public async Task<IReadOnlyList<BowlingInningsDto>> GetBowlingInningsAsync(int id)
     {
-
         var query = _db.BowlingInnings
             .Where(t => t.PlayerId == id)
-            .MapObservationToObservationFeedDto()
+            .MapObservationToObservationFeedDto()    
             .AsNoTracking()
             .AsQueryable();
 

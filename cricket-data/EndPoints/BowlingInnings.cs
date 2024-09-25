@@ -1,5 +1,3 @@
-using Microsoft.EntityFrameworkCore;
-
 namespace cricket_data.endpoints;
 
 public static class BowlingInningsEnpoints

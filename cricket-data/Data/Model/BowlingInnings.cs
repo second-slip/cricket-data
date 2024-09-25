@@ -39,36 +39,27 @@ public class BowlingInnings
     public Player? Player { get; set; } // reference navigation to principal
 }
 
-public class BowlingInningsDto
+public record BowlingInningsDto
 {
-    public int Id { get; set; }
+    public int Id { get; init; }
 
-    public float? Overs { get; set; }
+    public float? Overs { get; init; }
 
-    public int? Maidens { get; set; }
+    public int? Maidens { get; init; }
 
-    public int? Runs { get; set; }
+    public int? Runs { get; init; }
 
-    public int? Wickets { get; set; }
+    public int? Wickets { get; init; }
 
-    public float? Economy { get; set; }
+    public float? Economy { get; init; }
 
-    public int? Position { get; set; }
+    public int? Position { get; init; }
 
-    public int? Innings { get; set; }
+    public int? Innings { get; init; }
 
-    public string Opposition { get; set; }
+    public string Opposition { get; init; }
 
-    // public string? TestNumber { get; set; }
+    public string? Ground { get; init; }
 
-    public string? Ground { get; set; }
-
-    public string? PlayerName { get; set; }
-
-    // public BowlingInningsDto() { }
-    // public BowlingInningsDto(BowlingInnings inns) =>
-    // (Id, Overs, Maidens, Runs, Wickets, Economy, Position, Innings, Opposition, TestNumber, Ground, PlayerName) =
-
-    // (inns.Id, inns.Overs, inns.Maidens, inns.Runs, inns.Wickets, inns.Economy,
-    // inns.Position, inns.Innings, inns.Opposition, inns.TestNumber, inns.Ground?.Name, inns.Player?.Name);
+    public string? PlayerName { get; init; }
 }
