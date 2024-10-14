@@ -1,18 +1,16 @@
-using System;
 using System.Data.Common;
-using System.Linq;
 using Microsoft.Data.Sqlite;
 using Microsoft.EntityFrameworkCore;
 
 namespace EF.Testing.UnitTests;
 
-public class SqliteInMemoryBloggingControllerTest : IDisposable
+public class SqliteInMemoryBowlingInningsServiceTest : IDisposable
 {
     private readonly DbConnection _connection;
     private readonly DbContextOptions<CricketDataDb> _contextOptions;
 
     #region ConstructorAndDispose
-    public SqliteInMemoryBloggingControllerTest()
+    public SqliteInMemoryBowlingInningsServiceTest()
     {
         // Create and open a connection. This creates the SQLite in-memory database, which will persist until the connection is closed
         // at the end of the test (see Dispose below).

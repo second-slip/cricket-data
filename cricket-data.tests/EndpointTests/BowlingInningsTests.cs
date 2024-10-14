@@ -14,7 +14,7 @@ public class BowlingInningsTests
             .ReturnsAsync(new List<BowlingInningsDto>());
 
         // Act
-        var result = await BowlingInningsEnpoints.GetBowlingInnings(1, mock.Object);
+        var result = await BowlingInningsEndpoints.GetBowlingInnings(1, mock.Object);
 
         // Assert
         Assert.IsType<NotFound>(result);
@@ -62,7 +62,7 @@ public class BowlingInningsTests
             });
 
         // Act
-        var result = await BowlingInningsEnpoints.GetBowlingInnings(1, mock.Object);
+        var result = await BowlingInningsEndpoints.GetBowlingInnings(1, mock.Object);
 
         // Assert
         Assert.IsType<Ok<IReadOnlyList<BowlingInningsDto>>>(result);

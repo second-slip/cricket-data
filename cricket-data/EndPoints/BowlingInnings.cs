@@ -1,6 +1,6 @@
 namespace cricket_data.endpoints;
 
-public static class BowlingInningsEnpoints
+public static class BowlingInningsEndpoints
 {
     public static async Task<IResult> GetBowlingInnings(int id, IBowlingInningsService service)
     {
